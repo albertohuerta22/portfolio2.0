@@ -1,0 +1,22 @@
+.ml-auto-nav {
+  margin-left: auto;
+  padding-left: 10px;
+}
+
+.navbar-section {
+  background-color: #d7e2f7;
+}
+
+.home {
+  padding-left: 3rem;
+}
+
+.resume {
+  padding-right: 3rem;
+  margin-right: 20px;
+}
+
+.dark-mode-switch {
+  display: flex;
+  align-items: center; /* Vertically centers the toggle switch */
+}

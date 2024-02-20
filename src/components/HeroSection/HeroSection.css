@@ -1,0 +1,20 @@
+.hero-section {
+  display: flex;
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: center; /* Centers the content horizontally */
+  text-align: left;
+  flex-direction: row;
+}
+
+.hero-image,
+.hero-content {
+  flex: 1; /* Ensures both containers take up equal space */
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.hero-image img {
+  width: 100%; /* Makes the image responsive */
+  height: auto; /* Maintains the aspect ratio */
+  object-fit: cover; /* Ensures the image covers the container without stretching */
+  overflow: hidden;
+}

@@ -1,0 +1,22 @@
+.about-section {
+  display: flex;
+  flex-direction: row; /* Ensure the flex items are laid out in a row */
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+  text-align: center;
+  width: 100%; /* Ensure the container takes full width */
+  background-color: #d7e2f7;
+}
+
+.about-content,
+.about-image {
+  flex: 1; /* Each child takes equal space */
+  padding: 20px; /* Adjust padding as needed */
+}
+
+.about-image img {
+  width: 100%; /* Image takes the full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the container without stretching */
+  overflow: hidden;
+}

@@ -1,0 +1,13 @@
+.reviews-section {
+  padding: 50px 0; /* Adjust the padding as needed */
+  background-color: #f8f9fa; /* Light background for the section */
+  text-align: center; /* Center the text and carousel items */
+}
+
+.carousel-item p {
+  font-size: 1.2rem; /* Adjust the font size as needed */
+  margin: 0 auto; /* Center the review text */
+  max-width: 80%; /* Max width to keep the text readable */
+  line-height: 1.6; /* Improve readability */
+  height: 200px;
+}

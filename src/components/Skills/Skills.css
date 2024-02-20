@@ -1,0 +1,49 @@
+.skills-section {
+  padding: 50px 0;
+  background-color: #d7e2f7;
+}
+
+.backdrop {
+  background-color: #ffffff; /* Keeps the cards on a white background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds subtle depth */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjusted for even spacing */
+  gap: 20px; /* Provides consistent space between cards */
+}
+
+.card {
+  width: calc(33.33% - 20px); /* Adjusted card width */
+  margin-bottom: 20px;
+  display: flex; /* Makes the card a flex container */
+  flex-direction: column; /* Stacks content vertically */
+  justify-content: space-between; /* Distributes space evenly */
+}
+
+.technology {
+  display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  align-items: center; /* Centers items horizontally */
+  text-align: center;
+  margin-bottom: 10px; /* Space between technology container and card text */
+  max-height: 150px; /* Limits the height of the technology container */
+  overflow: hidden; /* Hides any content that exceeds the container's bounds */
+}
+
+.technology-logo {
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  object-fit: contain;
+  margin-bottom: 10px; /* Space between the logo and the title */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: start; /* Aligns content to the top */
+}

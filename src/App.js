@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import NavbarMain from './components/NavbarMain/NavbarMain';
+import HeroSection from './components/HeroSection/HeroSection';
+import About from './components/About/About';
+import ProjectsSection from './components/ProjectsSection/ProjectsSection';
+import ContactSection from './components/ContactSection/ContactSection';
+import Footer from './components/Footer/Footer';
 
-function App() {
+import './App.css';
+import Reviews from './components/Reviews/Reviews';
+import SkillsSection from './components/Skills/Skills';
+
+const App = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    document.body.className = darkMode ? 'dark-mode' : '';
+  }, [darkMode]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={darkMode ? 'dark-mode' : ''}>
+      <NavbarMain darkMode={darkMode} setDarkMode={setDarkMode} />
+      <div className="main-layout">
+        <HeroSection />
+        <About />
+        <ProjectsSection />
+        <SkillsSection />
+        <Reviews />
+        <ContactSection />
+        <Footer />
+      </div>
     </div>
   );
-}
+};
 
 export default App;

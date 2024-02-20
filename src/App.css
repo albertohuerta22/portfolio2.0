@@ -1,38 +1,119 @@
-.App {
-  text-align: center;
+/* Light Theme Variables */
+:root {
+  --primary-color: #8581ed; /* Tropical Indigo */
+  --secondary-color: #788bff; /* Cornflower Blue */
+  --background-color: #e2fdff; /* Light Cyan */
+  --card-background-color: #bfd7ff; /* Periwinkle */
+  --text-color: #333; /* Dark text for readability */
+  --footer-background-color: #333; /* Footer background */
+  --link-color: #788bff; /* Link color */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Dark Mode Overrides */
+.dark-mode {
+  --background-color: #162447; /* Dark Navy/Indigo */
+  --card-background-color: #1f4068; /* Darker shade for cards */
+  --text-color: #bfd7ff; /* Light text for readability */
+  --footer-background-color: #8c8ca8; /* Darker footer */
+  --link-color: #4da6ff; /* Brighter link color for visibility */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-layout {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh; /* Ensure it takes up at least the full height of the viewport */
+  background-color: #f5f5f7; /* Example background color, adjust based on your theme */
 }
 
-.App-link {
-  color: #61dafb;
+/* Additional global styles can go here */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: 0;
+  font-family: 'Roboto', sans-serif; /* Ensuring Roboto is used throughout */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* You might also want to include some global styles for padding, margins, etc., to ensure consistency */
+.container {
+  padding: 20px; /* Example padding, adjust as needed */
+  max-width: 1200px; /* Maximum width of content */
+  margin: 0 auto; /* Centering the content */
 }
+
+/* Section styles */
+.section {
+  min-height: 100vh; /* Make each section fill the screen */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+}
+
+/* Footer styles */
+.footer {
+  height: 150px; /* Example fixed height for the footer */
+  background-color: #333; /* Example footer background color */
+  color: #fff; /* Example footer text color */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.footer {
+  background-color: var(--footer-background-color);
+}
+
+a,
+.nav-link {
+  color: var(--link-color);
+}
+
+.card {
+  background-color: var(--card-background-color);
+  color: var(--text-color);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.dark-mode .btn-primary {
+  background-color: #4da6ff;
+  border-color: #4da6ff;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #121212; /* Dark background for the main layout */
+  color: #ffffff; /* Light text color for better readability in dark mode */
+}
+
+.dark-mode .section {
+  background-color: #1a1a1a; /* Slightly lighter dark background for sections */
+  color: #ffffff; /* Ensure text within sections is also light */
+}
+
+.dark-mode .footer {
+  background-color: #0d0d0d; /* Even darker background for footer for contrast */
+  color: #ffffff; /* Light text color for the footer */
+}
+
+/* Adjust link colors in dark mode for better visibility */
+.dark-mode a,
+.dark-mode a.nav-link {
+  color: #7bbaf9; /* Light blue color for links to stand out in dark mode */
+}
+
+/* If you have specific elements like buttons, cards, etc., you can add dark mode styles for them too */
+.dark-mode .btn-primary {
+  background-color: #007bff; /* Example primary button color in dark mode */
+  border-color: #007bff; /* Ensure the border color matches the button color */
+}
+
+.dark-mode .card {
+  background-color: #2a2a2a; /* Dark background for cards */
+  color: #ffffff; /* Light text color for cards */
+}
+
+/* You might want to add dark mode styles for form elements, tables, and other components as needed */

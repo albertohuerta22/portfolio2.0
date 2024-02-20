@@ -1,0 +1,15 @@
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  flex: 0 1 400px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  margin-bottom: 20px; /* Add margin bottom to the section title */
+}
